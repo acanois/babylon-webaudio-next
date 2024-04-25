@@ -10,6 +10,8 @@ import ResponsiveAppBar from './components/Navigation'
 export default function Home() {
   useEffect(() => {
     Tone.start()
+
+    const BPM = 140
     const synth = new BubbleSynth()
   })
   return (
