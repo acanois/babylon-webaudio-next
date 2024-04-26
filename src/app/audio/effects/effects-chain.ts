@@ -44,13 +44,9 @@ export class EffectsChain {
       type: 'bandpass',
       frequency: this.filterBase * this.octaves,
     }).connect(this.reverb) // to reverb
-    this.bpf = new Tone.Filter({
-      type: 'bandpass',
-      frequency: this.filterBase * this.octaves,
-    }).connect(this.reverb) // to reverb
 
     // Delay
-    this.delayTime = (1 / BPM / 3) * 1000
+    this.delayTime = (1 / bpm / 3) * 1000
     this.delay = new Tone.PingPongDelay({
       delayTime: this.delayTime,
       wet: 1.0,
@@ -61,7 +57,7 @@ export class EffectsChain {
       volume: 12,
     }).connect(this.hpf)
     this.delayChannel = new Tone.Channel({
-      volume: 15,
+      volume: 12,
     }).connect(this.delay)
   }
 }

@@ -1,11 +1,11 @@
 import * as Tone from 'tone'
 
 export class BubbleSynth {
-  synth: Tone.FMSynth
+  voice: Tone.FMSynth
 
   constructor() {
     // FM Synth
-    this.synth = new Tone.FMSynth({
+    this.voice = new Tone.FMSynth({
       modulationIndex: 12,
       oscillator: {
         type: 'sine',
