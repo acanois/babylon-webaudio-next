@@ -7,6 +7,8 @@ import { BubbleSynth } from './audio/instruments/bubble-synth'
 import { EffectsChain } from './audio/effects/effects-chain'
 import Button from '@mui/material/Button'
 
+import BabylonScene from './components/BabylonScene'
+
 export default function Home() {
   const startContext = () => {
     Tone.start()
@@ -21,7 +23,6 @@ export default function Home() {
   }
 
   useEffect(() => {
-    Tone.start()
     const bpm = 140
     const offset = 40
     const theScale = [
@@ -80,6 +81,7 @@ export default function Home() {
           stop
         </Button>
       </div>
+      <BabylonScene></BabylonScene>
     </main>
   )
 }
